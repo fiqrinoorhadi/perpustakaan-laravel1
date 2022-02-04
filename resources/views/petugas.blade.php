@@ -15,13 +15,16 @@
                     <th>No.Tlp</th>
                     <th>--</th>
                 </tr>
+                {{-- @dd($petugass) --}}
+                @foreach ($petugass as $petugas)
                 <tr>
-                    <td>1</td>
-                    <td>Fiqri Noor Hadi</td>
-                    <td>Kepala Perpustakaan</td>
-                    <td>0878789866</td>
+                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $petugas['nama'] }}</td>
+                    <td>{{ $petugas['jabatan'] }}</td>
+                    <td>{{ $petugas['tlp'] }}</td>
                     <td></td>
                 </tr>
+                @endforeach
             </table>
         </div>
         <div class="col-2">

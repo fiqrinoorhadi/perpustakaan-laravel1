@@ -13,17 +13,17 @@
                     <th>Nama</th>
                     <th>Kelas</th>
                     <th>Jurusan</th>
-                    <th>No.Tlp</th>
                     <th>--</th>
                 </tr>
+                @foreach ($anggotas as $anggota)
                 <tr>
-                    <td>1</td>
-                    <td>Faisal Akbar</td>
-                    <td>XII RPL 1</td>
-                    <td>Rekayasa Perangkat Lunak</td>
-                    <td>0878789866</td>
+                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $anggota['nama'] }}</td>
+                    <td>{{ $anggota['kelas'] }}</td>
+                    <td>{{ $anggota['jurusan'] }}</td>
                     <td></td>
                 </tr>
+                @endforeach
             </table>
         </div>
         <div class="col-2">

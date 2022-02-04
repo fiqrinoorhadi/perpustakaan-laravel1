@@ -13,17 +13,17 @@
                     <th>Judul</th>
                     <th>Penulis</th>
                     <th>Penerbit</th>
-                    <th>Tahun Terbit</th>
                     <th>--</th>
                 </tr>
+                @foreach ($bukus as $buku)
                 <tr>
-                    <td>1</td>
-                    <td>Pemrograman Web</td>
-                    <td>Budi Raharjo</td>
-                    <td>Informatika</td>
-                    <td>2022</td>
+                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $buku['judul'] }}</td>
+                    <td>{{ $buku['pengarang'] }}</td>
+                    <td>{{ $buku['penerbit'] }}</td>
                     <td></td>
                 </tr>
+                @endforeach
             </table>
         </div>
         <div class="col-2">
